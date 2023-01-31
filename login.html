@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/global.css">
+    <script defer src="index.js" ></script>
+</head>
+<body class="login__page">
+    <nav class="nav__login">
+        <div>
+            <a href="index.html">
+                <img src="./assets/Logo_with_name-removebg-preview.png" alt="Brand Logo">
+            </a>
+            
+        </div>
+   
+        <div class="nav__modeToggle">
+            <img src="./assets/lightIcon.svg" alt="light mode">
+        </div>
+    </nav>
+    <main class="login__page-input-field">
+        <form action="loggedin.html">
+            <div>
+                <div>
+                  <label for="" >Email</label>  
+                </div>  
+               <input type="email" onchange="validateFields()" name="email" id="email" placeholder="your@email.com">
+            </div>
+            <div>
+                <div>
+                    <label for="">Password</label>
+                </div>
+                
+                <input type="password" name="password" placeholder="password">
+            </div>
+            <div>
+                <button type="button" disabled >Login</button>
+            </div>
+            <div>
+                <button class="login__input-register-button" type="button" >Register</button>
+            </div>
+            <div>
+                <button type="button"  id="recover-password-button" disabled>Recover password</button>
+            </div>
+            
+            
+            
+        </form>
+    </main>
+</body>
+</html>

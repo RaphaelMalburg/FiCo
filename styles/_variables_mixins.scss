@@ -1,0 +1,115 @@
+
+$font-base: 'Poppins',sans-serif;
+
+$color-deep-blue: #262F60;
+$color-medium-blue: #246EB9;
+$color-dark: #342E37;
+$color-light: #FDFFFC;
+$color-light-blue: #B8C9D9;
+$color-red: #DA0000;
+$color-green: #00C01F;
+
+li,a,a:visited,:active{
+    list-style: none;
+    text-decoration: none;
+    color: $color-dark;
+  }
+
+img{
+    width: 100%;
+  }
+@mixin hero{
+    font-weight: bold;
+    font-size: 60px;
+    color:$color-dark;
+
+}
+
+@mixin heading{
+    font-weight: medium;
+    font-size: 34px;
+    color:$color-dark;
+
+}
+
+@mixin subHeading{
+    font-weight: bold;
+    font-size:  20px;
+    color:$color-dark;
+    
+}
+
+@mixin paragraph{
+    
+    font-size: 14px;
+    color:$color-dark;
+    font-weight: 400;
+    
+}
+
+@mixin flexCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@mixin container{
+    padding: 0 7%;
+}
+
+@mixin button {
+    background-color:$color-medium-blue;
+    color: $color-light;
+    border-radius: 5px;
+    height: fit-content;
+    border: none;
+    padding: 0.3rem 0.8rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+
+    &:hover{
+        transform: scale(1.1);
+        opacity:  0.8;
+    }
+    &:active{
+        opacity: 0.8;
+    }
+    &[disabled]{
+        opacity: 0.4;
+
+    }
+    
+  }
+  
+
+
+@mixin button-outline {
+    border-color: $color-medium-blue;
+    background-color: unset;
+    color: $color-dark;
+    border-radius: 5px;
+    height: fit-content;
+    border:$color-medium-blue solid 2px;
+    letter-spacing: 2px;
+    cursor: pointer;
+
+    &:hover{
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+    &:active{
+        opacity: 0.8;
+    }
+    &[disabled]{
+        opacity: 0.4;
+
+    }
+    
+}
+@mixin hover{
+    &:hover{
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+}

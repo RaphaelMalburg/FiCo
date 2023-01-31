@@ -1,0 +1,213 @@
+@import "variables_mixins";
+@import "reset";
+@import "login";
+
+
+*{
+    @include reset;
+    font-family: $font-base;
+}
+nav{
+    @include container;
+    @include subHeading;
+    background: $color-light-blue;
+    display: flex;
+    box-shadow: 0px 5px 34px 3px rgba(0,0,0,0.5);
+    
+    
+
+    div{
+
+        margin: 1rem;
+        height: auto;
+        width: 100px;
+        justify-content: flex-start;
+    }
+   
+    ul{
+        @include flexCenter;
+        justify-content: flex-end;
+        gap: 3rem;
+        flex-grow: 2;
+        padding-right: 1rem;
+        li{
+            &:hover{
+                transform: scale(1.1);
+                opacity: 0.8;
+            }
+        }
+    
+    button{
+
+        @include button;
+
+        
+    }
+    .btn-outline{
+
+            @include button-outline;
+
+        }
+   
+    }
+
+    .nav__modeToggle{
+        width: 30px;
+        height: auto;
+        justify-content: end;
+        img{
+            color: $color-dark;
+        }
+    }    
+   
+}
+
+main{
+    @include container;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 3rem 0;
+    .main__container-img  {
+        width: 40%;
+        
+    }
+    .main__hero{
+        @include flexCenter;
+        flex-direction: column;
+        width: 50%;
+        justify-content: space-evenly;
+        
+        h1{
+            @include hero;
+            letter-spacing: 2px
+        }
+        button{
+            @include button;
+            @include subHeading;
+            color: $color-light;
+            align-self:flex-start;
+            margin-top:2.5rem ;
+            padding: 0.7rem 2rem;
+        }
+    }
+
+}
+.section-divisor{
+    @include flexCenter;
+    background: $color-light-blue;
+    height: 4rem;
+    gap: 5rem;
+    box-shadow: 0px 5px 34px 3px rgba(0,0,0,0.5);
+    button{
+
+        @include button;
+        @include subHeading;
+        color:$color-light;
+        
+    }
+}
+section{
+    @include container;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 5rem;
+    
+    .section__container-callToAction{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 45%;
+        gap: 2rem;
+        
+        h1{
+            @include hero;
+            letter-spacing: 3px;
+        }
+        p{
+            @include subHeading;
+        }
+        button{
+            @include button;
+            @include subHeading;
+            color: $color-light;
+            align-self:flex-start;
+            margin-top:2.5rem ;
+            padding: 0.7rem 2rem;
+        }
+    }
+    .section__container-image{
+        width: 50%;
+        margin-right: 5rem;
+        
+    }
+}
+footer{
+    @include container;
+    margin-top:4rem;
+    padding-top:3rem;
+    background: $color-light-blue;
+    box-shadow: 0px 5px 34px 3px rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: space-between;
+    
+    .footer__container-logo{
+        width: 70px ;
+        height: auto;
+    }
+    .footer__container-nav{
+        @include subHeading;
+        
+        li{
+            padding-bottom: 1.5rem;
+            &:hover{
+                transform: scale(1.1);
+                opacity: 0.8;
+            }
+        }
+        
+        
+    }
+    .footer__container-nav-buttons{
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        .footer__container-nav-btn-full{
+            @include button;
+            @include subHeading;
+            color:$color-light;
+
+        }
+        .footer__container-nav-btn-outline{
+            @include button-outline;
+            @include subHeading;
+        }
+
+    }
+    .footer__container-social{
+        @include flexCenter; 
+        gap: 3rem;
+        .footer__social-add-hover{
+            @include hover;
+
+        }
+        
+
+    }
+    .footer__contact-items{
+        display: flex;
+        flex-wrap: nowrap;
+        
+
+        img{
+            width: 40px;
+            margin-right: 2rem;
+            margin-bottom: 1rem;
+        }
+    }
+    
+}
+.footer__copyright{
+    padding: 1rem 0;
+    @include flexCenter;
+    background: $color-light-blue;
+}
