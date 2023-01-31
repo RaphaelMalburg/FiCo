@@ -464,4 +464,13 @@ footer .footer__contact-items img {
   justify-content: center;
   align-items: center;
   background: #B8C9D9;
+}
+
+.error {
+  background: rgba(212, 38, 38, 0.9176470588);
+  border-radius: 5px;
+  color: #FDFFFC;
+  padding: 0 5px;
+  margin: 5px 0;
+  display: none;
 }/*# sourceMappingURL=global.css.map */

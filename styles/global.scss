@@ -211,3 +211,12 @@ footer{
     @include flexCenter;
     background: $color-light-blue;
 }
+.error{
+    background: $color-red;
+    border-radius: 5px;
+    color: $color-light;
+    padding: 0 5px;
+    margin: 5px 0;
+    display: none;
+    
+}

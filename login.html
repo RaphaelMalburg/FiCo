@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/global.css">
     <script defer src="index.js" ></script>
+    <script defer src="validations.js"></script>
 </head>
 <body class="login__page">
     <nav class="nav__login">
@@ -30,17 +31,19 @@
                 <div>
                   <label for="" >Email</label>  
                 </div>  
-               <input type="email" onchange="validateFields()" name="email" id="email" placeholder="your@email.com">
+                <input type="email" onchange="onChangeEmail()" name="email" id="email" placeholder="your@email.com">
+                <div class="error" id="email-required-error">Email is required</div>
+                <div class="error" id="email-invalid-error">Email is invalid</div>
             </div>
             <div>
                 <div>
                     <label for="">Password</label>
                 </div>
-                
-                <input type="password" name="password" placeholder="password">
+                <input type="password" name="password" id="password"  onchange="onChangePassword()"  placeholder="password">
+                <div class="error" id="password-required-error">Password is required</div>
             </div>
             <div>
-                <button type="button" disabled >Login</button>
+                <button type="button" disabled id="login-button">Login</button>
             </div>
             <div>
                 <button class="login__input-register-button" type="button" >Register</button>
