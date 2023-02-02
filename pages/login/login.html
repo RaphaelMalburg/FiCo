@@ -4,26 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log In</title>
+    <title>Log In - FiCo</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles/global.css">
-    <script defer src="index.js" ></script>
-    <script defer src="validations.js"></script>
+    <link rel="stylesheet" href="./../../styles/global.css">
+    <script defer src="./../../index.js" ></script>
+    <script defer src="./../../validations.js"></script>
+    <script defer src="./../../loading.js"></script>
+    
+    
 </head>
 <body class="login__page">
-    <nav class="nav__login">
+    <nav class="nav__login" >
         <div>
             <a href="index.html">
-                <img src="./assets/Logo_with_name-removebg-preview.png" alt="Brand Logo">
+                <img src="./../../assets/Logo_with_name-removebg-preview.png" alt="Brand Logo">
             </a>
             
         </div>
-   
-        <div class="nav__modeToggle">
-            <img src="./assets/lightIcon.svg" alt="light mode">
+        <div class="nav__container-toggle-arrow">
+            <div class="nav__modeToggle">
+            <img src="./../../assets/lightIcon.svg" alt="light mode">
         </div>
+        <div class="nav__arrow-back">
+            <a href="./../home/index.html"><img src="./../../assets/arrowback.svg" alt="arrow back"></a>
+        </div>
+        </div>
+        
     </nav>
     <main class="login__page-input-field">
         <form action="loggedin.html">
@@ -43,13 +51,13 @@
                 <div class="error" id="password-required-error">Password is required</div>
             </div>
             <div>
-                <button type="button" disabled id="login-button">Login</button>
+                <button type="button" disabled id="login-button" onclick="login()">Login</button>
             </div>
             <div>
-                <button class="login__input-register-button" type="button" >Register</button>
+                <button class="login__input-register-button" type="button" onclick="register()" >Register</button>
             </div>
             <div>
-                <button type="button"  id="recover-password-button" disabled>Recover password</button>
+                <button type="button"  id="recover-password-button" onclick="recoverPassword()" disabled>Recover password</button>
             </div>
             
             
@@ -57,4 +65,7 @@
         </form>
     </main>
 </body>
+<script  src="https://www.gstatic.com/firebasejs/9.16.0/firebase-app-compat.js"></script>
+    <script  src="https://www.gstatic.com/firebasejs/9.16.0/firebase-auth-compat.js"></script>
+    <script src="./../../firebase-init.js" ></script>
 </html>

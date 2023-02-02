@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - FiCo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./../../styles/global.css">
+    <script defer src="./../../validations.js "></script>
+   
+
+</head>
+<body class="login__page">
+    <nav class="nav__login">
+        <div>
+            <a href="index.html">
+                <img src="./../../assets/Logo_with_name-removebg-preview.png" alt="Brand Logo">
+            </a>
+            
+        </div>
+        <div class="nav__container-toggle-arrow">
+            <div class="nav__modeToggle">
+            <img src="./../../assets/lightIcon.svg" alt="light mode">
+        </div>
+        <div class="nav__arrow-back">
+            <a href="./../login/login.html"><img src="./../../assets/arrowback.svg" alt="arrow back"></a>
+        </div>
+        </div>
+        
+    </nav>
+    <main class="login__page-input-field">
+        <form action="loggedin.html">
+            <div><h2 class="register__header">Register</h2></div>
+            <div>
+                <div>
+                  <label for="email" >Email</label>  
+                </div>  
+                <input type="email" onchange="onChangeEmail()" name="email" id="email" placeholder="your@email.com">
+                <div class="error" id="email-required-error">Email is required</div>
+                <div class="error" id="email-invalid-error">Email is invalid</div>
+            </div>
+
+            <div>
+                <div>
+                    <label for="">Password</label>
+                </div>
+                <input type="password" name="password" id="password"  onchange="onChangePassword()"  placeholder="password">
+                <div class="error" id="password-required-error">Password is required</div>
+                <div class="error" id="password-min-length-error">At least 6 characters</div>
+            </div>
+
+            <div>
+                <div>
+                    <label for="">Confirm Password</label>
+                </div>
+                <input type="password" name="password" id="confirmPassword"   onchange="onChangeConfirmPassword()"  placeholder=" confirm password">
+                <div class="error" id="password-doesnt-match-error">Password doesn't match</div>
+            </div>
+
+           
+
+            <div>
+                <button class="login__input-register-button" type="button" disabled onclick="register()" id="register-button">Register</button>
+            </div>
+            
+            
+            
+            
+        </form>
+    </main>
+    <script defer  src="https://www.gstatic.com/firebasejs/9.16.0/firebase-app-compat.js"></script>
+    <script defer  src="https://www.gstatic.com/firebasejs/9.16.0/firebase-auth-compat.js"></script>
+    <script defer src="./../../firebase-init.js" ></script>
+    
+    <script defer src="./../../loading.js"></script>
+    <script defer src="register.js"></script>
+</body>
+</html>

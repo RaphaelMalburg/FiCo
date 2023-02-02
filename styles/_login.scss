@@ -18,7 +18,7 @@
         input{
             padding:0.2rem;
         }
-    }
+    }    
     button{
         @include button;
         width: 100%;
@@ -27,4 +27,22 @@
     .login__input-register-button{
         @include button-outline;
     }
+}
+//-----------------------
+//----register window
+
+.nav__arrow-back{
+    width: 50px;
+    height: 50px;
+}
+.nav__container-toggle-arrow{
+    @include flexCenter;
+    flex-direction: column;
+}
+.register__header{
+    @include flexCenter;
+    @include heading;
+    margin-top: -2rem;
+    margin-bottom: 1rem;
+    
 }

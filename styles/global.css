@@ -76,6 +76,29 @@ img {
   opacity: 0.4;
 }
 
+.nav__arrow-back {
+  width: 50px;
+  height: 50px;
+}
+
+.nav__container-toggle-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.register__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: medium;
+  font-size: 34px;
+  color: #342E37;
+  margin-top: -2rem;
+  margin-bottom: 1rem;
+}
+
 * {
   /*
     2. Remove default margin
@@ -203,7 +226,7 @@ nav ul .btn-outline[disabled] {
 }
 nav .nav__modeToggle {
   width: 30px;
-  height: auto;
+  height: 40px;
   justify-content: end;
 }
 nav .nav__modeToggle img {
@@ -473,4 +496,18 @@ footer .footer__contact-items img {
   padding: 0 5px;
   margin: 5px 0;
   display: none;
+}
+
+.loading {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loading img {
+  width: 10rem;
 }/*# sourceMappingURL=global.css.map */
