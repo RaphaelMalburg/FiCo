@@ -9,7 +9,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./../../styles/global.css">
+        
     </head>
+
     <body>
         <nav>
             <div>
@@ -20,8 +22,8 @@
             <ul>
                 <li><a href="">Home</a></li>
                 <li><a href="">How It works</a></li>
-                <button>Login</button>
-                <button class="btn-outline">Sign Up</button>
+                <a href="./../login/login.html"><button >Login</button></a>
+                <a href="./../register/register.html"><button class="btn-outline">Sign Up</button></a>
                 
             </ul>
             <div class="nav__modeToggle">
@@ -84,4 +86,8 @@
         </footer>
          <p class="footer__copyright">© All rights reserved. 2023</p>
     </body>
+    <script defer  src="https://www.gstatic.com/firebasejs/9.16.0/firebase-app-compat.js"></script>
+<script defer  src="https://www.gstatic.com/firebasejs/9.16.0/firebase-auth-compat.js"></script>
+<script defer src="./../../firebase-init.js" ></script>
+    <script src="./../../auth-guard.js"></script>
 </html>

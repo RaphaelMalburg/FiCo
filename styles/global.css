@@ -99,6 +99,138 @@ img {
   margin-bottom: 1rem;
 }
 
+.nav__loggedin {
+  padding: 0 7%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5rem;
+}
+.nav__loggedin .nav__loggedin-coins__container {
+  width: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.nav__loggedin .nav__loggedin-coins__container img {
+  width: 30%;
+}
+.nav__loggedin .nav__loggedin-user__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100px;
+}
+.nav__loggedin .nav__loggedin-user__container img {
+  width: 30%;
+}
+
+.search__box {
+  padding: 0 7%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search__input {
+  display: flex;
+  border: 2px solid #262F60;
+  border-radius: 5px;
+  padding: 2px 7px;
+  margin-top: 3rem;
+  width: 300px;
+}
+.search__input span img {
+  width: 25px;
+}
+.search__input input {
+  border-style: hidden;
+}
+.search__input input:focus {
+  outline: none;
+}
+
+.loggedin__body {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: flex-start;
+}
+
+.loggedin__add-button {
+  background-color: #246EB9;
+  color: #FDFFFC;
+  border-radius: 5px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border: none;
+  padding: 0.3rem 0.8rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+  font-weight: medium;
+  font-size: 34px;
+  color: #342E37;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  position: fixed;
+  color: #FDFFFC;
+  bottom: 3rem;
+  right: 3rem;
+}
+.loggedin__add-button:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+.loggedin__add-button:active {
+  opacity: 0.8;
+}
+.loggedin__add-button[disabled] {
+  opacity: 0.4;
+}
+
+div ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70vw;
+  height: 110px;
+  background: #B8C9D9;
+  border-radius: 7px;
+  box-shadow: 0px 5px 34px 3px rgba(0, 0, 0, 0.5);
+  margin-bottom: 1rem;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+div ul:hover {
+  opacity: 0.8;
+}
+div ul li > * {
+  margin: 1.5rem;
+}
+
+.income {
+  border-left: 25px solid #13b92e;
+}
+.income h2:nth-child(2) {
+  color: #13b92e;
+}
+
+.expense {
+  border-left: 25px solid rgba(212, 38, 38, 0.9176470588);
+}
+.expense h2:nth-child(2) {
+  color: rgba(212, 38, 38, 0.9176470588);
+}
+
 * {
   /*
     2. Remove default margin

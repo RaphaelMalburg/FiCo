@@ -11,61 +11,72 @@
     <link rel="stylesheet" href="../../styles/global.css">
 </head>
 <body>
-    <nav>
+    <nav class="nav__loggedin">
         <div>
-            <img src="./../../assets/Logo_with_name-removebg-preview.png" alt="Brand Logo">
-        </div>
-        <div>
-            <img src="./../../assets/coins.svg" alt="">
-            <h2> 12546 €</h2>
-
-        </div>
-        <div>
-            <img src="./../../assets/usericon.svg" alt="">
-            <h2>John Doe</h2>
+            <img  src="./../../assets/Logo_with_name-removebg-preview.png" alt="Brand Logo">
         </div>
         <ul>
-            
-            <button>Log Out</button>
-            
+        <div class="nav__loggedin-coins__container">
+            <img src="./../../assets/coins.svg" alt="">
+            <h4> 12546€</h4>
+
+        </div>
+
+        <div class="nav__loggedin-user__container">
+            <img src="./../../assets/usericon.svg" alt="">
+            <h4>John Doe</h4>
+        </div>
+
+        
+            <button onclick="logout()">Log Out</button> 
         </ul>
         <div class="nav__modeToggle">
             <img src="./../../assets/lightIcon.svg" alt="light mode">
         </div>
+    </ul>
     </nav>
-    <main>
-        <div>
-            <form action="">
-                <input type="text" placeholder="Search Registers">
+    <div class="search__box">
+            <form class="search__input">
                 <span> <img src="./../../assets/magnifying.svg" alt=""></span>
+                <input type="text" placeholder="Search Registers">
             </form>
             
         </div>
-        <div>
-            <div>
-                <span></span>
-                <h2></h2>
-                <p></p>
+    <main  class="loggedin__body">
 
-            </div>
-            <div>
-                <p></p>
-                <h2></h2>
-            </div>
-        </div>
-        <div>
-            <div>
-                <span></span>
-                <h2></h2>
-                <p></p>
 
-            </div>
-            <div>
-                <p></p>
-                <h2></h2>
-            </div>
-        </div>
-        <button>+</button>
+        <div id="transactions">
+            
+        </div>    
+        <!--
+    
+       
+        <ul class="loggedin__field-income">
+            <li>
+                <h2>Wage</h2>
+                <p>company blue</p>
+            </li>
+            <li >
+                <p>03/01/2023</p>
+                <h2 >2250,5€</h2>
+            </li>
+        </ul>
+        <ul class="loggedin__field-expense">
+            <li >
+                <h2>Groceries</h2>
+                <p>Chocolate bought on Lidl</p>
+            </li>
+            <li >
+                <p>03/01/2023</p>
+                <h2 >22,5€</h2>
+            </li>
+        </ul>
+
+         -->
+
+      
+        
+        <button class="loggedin__add-button">+</button>
     </main>
     <footer>
         <div class="footer__container-logo">
@@ -91,9 +102,10 @@
     </footer>
      <p class="footer__copyright">© All rights reserved. 2023</p>
 </body>
-<script defer  src="https://www.gstatic.com/firebasejs/9.16.0/firebase-app-compat.js"></script>
-<script defer  src="https://www.gstatic.com/firebasejs/9.16.0/firebase-auth-compat.js"></script>
-<script defer src="./../../firebase-init.js" ></script>
-
-<script defer src="./../../loading.js"></script>
+<script src="loggedin.js"></script>
+<script   src="https://www.gstatic.com/firebasejs/9.16.0/firebase-app-compat.js"></script>
+<script   src="https://www.gstatic.com/firebasejs/9.16.0/firebase-auth-compat.js"></script>
+<script  src="./../../firebase-init.js" ></script>
+<script src="./../../auth-guard.js"></script>
+<script  src="./../../loading.js"></script>
 </html>

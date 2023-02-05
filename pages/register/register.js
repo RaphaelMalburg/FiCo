@@ -7,7 +7,7 @@ function onChangeEmail(){
     toggleRegisterButtonDisable()
 }
 
-firebase.auth().onAuthStateChanged(function (user){
+firebase.auth().onAuthStateChanged(user =>{
     if(user){
         window.location.href = './../../pages/loggedin/loggedin.html'
     }

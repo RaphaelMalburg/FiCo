@@ -46,3 +46,91 @@
     margin-bottom: 1rem;
     
 }
+
+//-----------------------
+//----logged in window
+.nav__loggedin{
+    @include container;
+    @include flexCenter;
+    justify-content: space-between;
+    gap: 5rem;
+    .nav__loggedin-coins__container{
+        width: 140px;
+        @include flexCenter;
+        flex-direction: row;
+        
+        img{
+            width: 30%;
+        }
+       
+    }
+    .nav__loggedin-user__container{
+        @include flexCenter;
+        flex-direction: column;
+        width: 100px;
+        
+        img{
+            width: 30%;
+        }
+    }
+   
+}
+.search__box{
+
+    @include container;
+    @include flexCenter;
+}
+.search__input{
+    display: flex;
+    border: 2px solid $color-deep-blue;
+    border-radius: 5px;
+    padding: 2px 7px;
+    margin-top: 3rem;
+    width: 300px;
+    span img {
+
+        width: 25px;
+    }
+    input {
+        
+        border-style: hidden;
+        &:focus{
+            outline: none;
+            
+        }
+    }
+
+}
+.loggedin__body{
+    height: 70vh;
+    @include flexCenter;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: flex-start;
+}
+.loggedin__add-button{
+    @include button;
+    @include heading;
+    @include flexCenter;
+    font-weight: 500;
+    position: fixed;
+    color: $color-light;
+    bottom: 3rem;
+    right: 3rem;
+}
+div ul{
+    @include flexCenter;
+    @include basic-register-layout;
+
+}
+.income{
+    
+    @include income-template;
+   
+}
+.expense{
+    
+    @include expense-template;
+    
+}
+
