@@ -5,14 +5,34 @@ function logout(){
         alert('Ooops, a problem happened during the logout')
     })}
 
-findTransactions();
+firebase.auth().onAuthStateChanged(user => {
+    if (user) {
+        findTransactions(user)
+    }
+})
 
-function findTransactions(){
-    
-    setTimeout(() =>{
-        
-        addTransactionsToScreen(fakeTransactions);
-    },1000)
+function findTransactions(user){
+   showLoading()
+    firebase.firestore()
+        .collection('transactions')
+        .where('user.uid', '==' ,user.uid )
+        .orderBy('date','desc')
+        .get()
+        .then(snapshot =>{
+            hideLoading()
+           const transactions = snapshot.docs.map(doc => doc.data())
+           addTransactionsToScreen(transactions)
+        })
+        .catch(error =>{
+            hideLoading()
+            console.log(error)
+            alert('Error during transactions recover')
+        })
+}
+
+function newTransaction(){
+
+    window.location.href = './../transaction/transaction.html'
 }
 
 function addTransactionsToScreen(transactions){
@@ -63,31 +83,3 @@ function formatDate(date){
 function formatMoney(value){
     return `${value.toFixed(2)}  €`
 }
-
-const fakeTransactions = [
-    {
-    type: 'expense',
-    date: '2023/01/04',
-    value: -10.50,
-    transactionType: 'market'
-    },
-    {
-    type: 'income',
-    date: '2023/01/07',
-    value: 1875,
-    transactionType: 'salary',
-    description: 'Company blue'
-    },
-    {
-    type: 'expense',
-    date: '2023/01/04',
-    value: 10,
-    transactionType: 'market'
-    },
-    {
-    type: 'income',
-    date: '2023/01/07',
-    value: 1875,
-    transactionType: 'salary',
-    description: 'Company blue'
-    }] 

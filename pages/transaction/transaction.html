@@ -35,48 +35,64 @@
         </div>
     </ul>
     </nav>
-    <div class="search__box">
-            <form class="search__input">
-                <span> <img src="./../../assets/magnifying.svg" alt=""></span>
-                <input type="text" placeholder="Search Registers">
-            </form>
+    <main class="login__page-input-field">
+        <form >
+            <div><h2 class="register__header">Register Transaction</h2></div>
+            <div>
+                <div><h4>Transaction type *</h4></div>
+               <input type="radio" name="type" checked id="expense">
+               <label for="expense">Expense</label>
+               <input type="radio" name="type" id="income">
+               <label for="income">Income</label>
+            </div>
+
+            <div>
+                <div><h4>Date *</h4></div>
+                <input type="date" onchange="onChangeDate()" id="date">
+                <div class="error" id="date-required-error">Date is required/invalid</div>
+                
+            </div>
+
+            <div>
+                <div><h4>Value *</h4></div>
+                <input type="number" onchange="onChangeValue()" id="value">
+                <div class="error" id="value-required-error">Value is required</div>
+                
+            </div>
+
+            <div>
+                <div><h4>Transaction Type *</h4></div>
+                <select onchange="onchangeTransactionType()" id="transaction-type">
+                    <option value="">- Select the type -</option>
+                    <option>Supermarket</option>
+                    <option>Restaurant</option>
+                    <option>Health care</option>
+                    <option>Clothes</option>
+                    <option>Rent</option>
+                    <option>Entertainment</option>
+                    <option>Income</option>
+                    <option>Transportation</option>
+                    <option>Others</option>
+
+                </select>
+                <div class="error" id="transaction-type-required-error">Transaction type is required</div>
+
+            </div>
+           
+            <div>
+                <div><h4>Description</h4></div>
+                <input type="text" >
+            </div>
+
+            <div>
+                <button type="button" disabled id="save-button">Save</button>
+                <button class="login__input-register-button" type="button" >Cancel</button>
+            </div>
             
-        </div>
-    <main  class="loggedin__body">
-
-
-        <div id="transactions">
-
-        </div>    
-        <!--
-    
-       
-        <ul class="loggedin__field-income">
-            <li>
-                <h2>Wage</h2>
-                <p>company blue</p>
-            </li>
-            <li >
-                <p>03/01/2023</p>
-                <h2 >2250,5€</h2>
-            </li>
-        </ul>
-        <ul class="loggedin__field-expense">
-            <li >
-                <h2>Groceries</h2>
-                <p>Chocolate bought on Lidl</p>
-            </li>
-            <li >
-                <p>03/01/2023</p>
-                <h2 >22,5€</h2>
-            </li>
-        </ul>
-
-         -->
-
-      
-        
-        <button class="loggedin__add-button" onclick="newTransaction()">+</button>
+            
+            
+            
+        </form>
     </main>
     <footer>
         <div class="footer__container-logo">
@@ -109,5 +125,5 @@
 <script  src="./../../firebase-init.js" ></script>
 <script src="./../../auth-guard.js"></script>
 <script  src="./../../loading.js"></script>
-<script src="loggedin.js"></script>
+<script src="transaction.js"></script>
 </html>
