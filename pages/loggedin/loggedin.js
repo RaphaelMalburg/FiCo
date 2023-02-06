@@ -20,20 +20,55 @@ function addTransactionsToScreen(transactions){
 
    transactions.forEach(transaction => {
     const ul = document.createElement('ul')
-    const li = document.createElement('li')
-    
     ul.classList.add(transaction.type)
-    ul.appendChild(li)
-    unorderedList.appendChild(ul)
+
+    const liLeft = document.createElement('li')
+    const liRight = document.createElement('li')
+    ul.appendChild(liLeft)
+    ul.appendChild(liRight)
+
+
+    const transactionDate = document.createElement('p')
+    transactionDate.innerHTML = formatDate(transaction.date);
+    const transactionValue = document.createElement('h2')
+    transactionValue.innerHTML = formatMoney(transaction.value);
+    liRight.appendChild(transactionDate)
+    liRight.appendChild(transactionValue )
     
+    const transactionTitle = document.createElement('h2')
+    
+    transactionTitle.innerHTML = transaction.transactionType;
+    
+    liLeft.appendChild(transactionTitle)
+    
+    if(transaction.description){
+     const transactionDescription = document.createElement('p')
+     transactionDescription.innerHTML = transaction.description;   
+     liLeft.appendChild(transactionDescription)
+    } else{
+     const transactionDescription = document.createElement('p')
+     transactionDescription.innerHTML = ' -  '   
+     liLeft.appendChild(transactionDescription)
+    }
+
+
+    
+    unorderedList.appendChild(ul)
    });
+}
+
+function formatDate(date){
+    return new Date(date).toLocaleDateString('pt-pt')
+}
+function formatMoney(value){
+    return `${value.toFixed(2)}  €`
 }
 
 const fakeTransactions = [
     {
     type: 'expense',
     date: '2023/01/04',
-    value: 10,
+    value: -10.50,
     transactionType: 'market'
     },
     {
@@ -55,4 +90,4 @@ const fakeTransactions = [
     value: 1875,
     transactionType: 'salary',
     description: 'Company blue'
-    }]
+    }] 
