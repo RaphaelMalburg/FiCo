@@ -202,19 +202,39 @@ div ul {
   justify-content: center;
   align-items: center;
   width: 70vw;
-  height: 110px;
+  height: 150px;
   background: #B8C9D9;
   border-radius: 7px;
   box-shadow: 0px 5px 34px 3px rgba(0, 0, 0, 0.5);
   margin-bottom: 1rem;
   justify-content: space-between;
   padding: 0 2rem;
+  position: relative;
 }
 div ul:hover {
-  opacity: 0.8;
+  opacity: 0.87;
+}
+div ul:hover .remove-button {
+  display: block;
 }
 div ul li > * {
-  margin: 1.5rem;
+  margin: 1rem;
+}
+div ul .remove-button {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  border-radius: 7px;
+  cursor: pointer;
+  color: rgba(212, 38, 38, 0.9176470588);
+  background: none;
+  border-color: rgba(212, 38, 38, 0.9176470588);
+  display: none;
+}
+div ul .remove-button:hover {
+  color: #FDFFFC;
+  background: rgba(212, 38, 38, 0.9176470588);
+  border-color: #FDFFFC;
 }
 
 .income {

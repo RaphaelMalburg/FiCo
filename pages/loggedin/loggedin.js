@@ -13,15 +13,10 @@ firebase.auth().onAuthStateChanged(user => {
 
 function findTransactions(user){
    showLoading()
-    firebase.firestore()
-        .collection('transactions')
-        .where('user.uid', '==' ,user.uid )
-        .orderBy('date','desc')
-        .get()
-        .then(snapshot =>{
+    transactionService.findByUser(user)
+        .then(transactions =>{
             hideLoading()
-           const transactions = snapshot.docs.map(doc => doc.data())
-           addTransactionsToScreen(transactions)
+            addTransactionsToScreen(transactions)
         })
         .catch(error =>{
             hideLoading()
@@ -39,19 +34,41 @@ function addTransactionsToScreen(transactions){
    const unorderedList = document.getElementById('transactions')
 
    transactions.forEach(transaction => {
+    
     const ul = document.createElement('ul')
     ul.classList.add(transaction.type)
+    ul.id = transaction.uid;
+    ul.addEventListener('click', ()=> {
+        window.location.href ='./../transaction/transaction.html?uid=' + transaction.uid;
+    })
+
 
     const liLeft = document.createElement('li')
     const liRight = document.createElement('li')
     ul.appendChild(liLeft)
     ul.appendChild(liRight)
+    const deleteButton = document.createElement('button')
+    deleteButton.className = 'remove-button'
+    deleteButton.innerHTML = 'Remove'
+    
+    deleteButton.addEventListener('click', event => {
+        event.stopPropagation()
+        askRemoveTransaction(transaction)
+    })
 
+
+
+    ul.appendChild(deleteButton)
 
     const transactionDate = document.createElement('p')
     transactionDate.innerHTML = formatDate(transaction.date);
     const transactionValue = document.createElement('h2')
     transactionValue.innerHTML = formatMoney(transaction.value);
+
+    
+
+    
+    
     liRight.appendChild(transactionDate)
     liRight.appendChild(transactionValue )
     
@@ -71,15 +88,62 @@ function addTransactionsToScreen(transactions){
      liLeft.appendChild(transactionDescription)
     }
 
-
     
     unorderedList.appendChild(ul)
    });
 }
+function sumAmountMoney(transactions){
 
+
+}
+function askRemoveTransaction(transaction){
+    const shouldRemove = confirm('Confirm the removal of the transaction?')
+    if(shouldRemove){
+        removeTransaction(transaction)
+    }
+
+}
+
+
+function removeTransaction(transaction){
+    showLoading()
+    transactionService.remove(transaction) 
+        .then(() =>{
+            hideLoading()
+            
+            document.getElementById(transaction.uid).remove();
+        })
+        .catch(error => {
+            hideLoading()
+            console.log(error)
+            alert('Error removing transaction')
+        })
+
+}
 function formatDate(date){
     return new Date(date).toLocaleDateString('pt-pt')
 }
 function formatMoney(value){
     return `${value.toFixed(2)}  €`
 }
+
+
+
+function sumAmountMoney(value){
+    firebase.firestore()
+    .collection('transactions')
+    .get()
+    .then(snapshot => {
+        snapshot.docs.forEach(doc => {
+            console.log(doc.data())
+        }) 
+    })
+    .catch(error =>{
+            hideLoading()
+            console.log(error)
+            alert('Error during value recover')
+        })
+    //const valueArray = Object.values(transaction.value);
+    
+}
+sumAmountMoney()

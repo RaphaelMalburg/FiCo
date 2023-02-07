@@ -18,7 +18,7 @@
         <ul>
         <div class="nav__loggedin-coins__container">
             <img src="./../../assets/coins.svg" alt="">
-            <h4> 12546€</h4>
+            <h4 id="money-amount" onchange="moneyAmout()"> 12546€</h4>
 
         </div>
 
@@ -81,12 +81,12 @@
            
             <div>
                 <div><h4>Description</h4></div>
-                <input type="text" >
+                <input type="text" id="description" >
             </div>
 
             <div>
-                <button type="button" disabled id="save-button">Save</button>
-                <button class="login__input-register-button" type="button" >Cancel</button>
+                <button type="button" disabled id="save-button" onclick="saveTransaction()">Save</button>
+                <button class="login__input-register-button" type="button" onclick="window.location.href = './../loggedin/loggedin.html'" >Cancel</button>
             </div>
             
             
@@ -125,5 +125,6 @@
 <script  src="./../../firebase-init.js" ></script>
 <script src="./../../auth-guard.js"></script>
 <script  src="./../../loading.js"></script>
+<script src="./../../services/transaction.service.js"></script>
 <script src="transaction.js"></script>
 </html>
