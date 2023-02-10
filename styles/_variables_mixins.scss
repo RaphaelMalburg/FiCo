@@ -18,6 +18,75 @@ li,a,a:visited,:active{
 img{
     width: 100%;
   }
+
+@mixin lightMode{
+    h1,h2,h3,h4,h5,h6,p{
+        color:$color-dark;
+    }
+    button{
+        background: $color-medium-blue;
+        color: $color-light;
+        .outline{
+            background: none;
+            border-color: $color-medium-blue;
+            color: $color-dark;
+        }
+    }
+    img svg{
+       fill:$color-deep-blue; 
+    }
+    body{
+        background: $color-light;
+    }
+    
+    ul{
+        background: $color-light-blue;
+    }
+    nav{
+        background: $color-light-blue;
+    }
+    .search__input{
+        border-color:  $color-medium-blue;
+    }
+    
+    
+}
+@mixin darkMode{
+    h1,h2,h3,h4,h5,h6,p{
+       color: $color-light;
+    }
+    button{
+        background: $color-light-blue;
+        color: $color-dark;
+        .outline{
+            background: none;
+            border-color: $color-light;
+            color: $color-light;
+        }
+    }
+    svg{
+       fill:$color-light-blue; 
+    }
+    body,main, .search__box,input {
+        background: $color-dark;
+    }
+    nav{
+        background: $color-medium-blue;
+    }
+    ul{
+        background: $color-medium-blue;
+    }
+    .search__input{
+        border-color:  $color-light-blue;
+    }
+    footer, .footer__copyright{
+        background: $color-medium-blue;
+    }
+    .footer__copyright{
+        background: $color-medium-blue;
+    }
+}
+
 @mixin hero{
     font-weight: bold;
     font-size: 60px;

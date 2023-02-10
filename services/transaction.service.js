@@ -48,3 +48,34 @@ const transactionService = {
     }
 }
 
+function formatMoney(value){
+    return `${value.toFixed(2)}  €`
+}
+
+
+
+function sumAmountMoney(value){
+    firebase.firestore()
+    .collection('transactions')
+    .get()
+    .then(snapshot => {
+      const total = snapshot.docs.reduce((sum, doc) => {
+        const amount = doc.data().value;
+        if (typeof amount === 'number' && !isNaN(amount)) {
+          return sum + amount;
+        }
+        return sum;
+      }, 0);
+      
+     const moneyValue= document.getElementById('money-amount')
+     moneyValue.innerHTML = formatMoney(total)
+      console.log(total);
+    })  
+    .catch(error =>{
+            hideLoading()
+            console.log(error)
+            alert('Error during value recover')
+        })
+   
+}
+sumAmountMoney();

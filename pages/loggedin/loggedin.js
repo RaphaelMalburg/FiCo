@@ -127,23 +127,3 @@ function formatMoney(value){
     return `${value.toFixed(2)}  €`
 }
 
-
-
-function sumAmountMoney(value){
-    firebase.firestore()
-    .collection('transactions')
-    .get()
-    .then(snapshot => {
-        snapshot.docs.forEach(doc => {
-            console.log(doc.data())
-        }) 
-    })
-    .catch(error =>{
-            hideLoading()
-            console.log(error)
-            alert('Error during value recover')
-        })
-    //const valueArray = Object.values(transaction.value);
-    
-}
-sumAmountMoney()
