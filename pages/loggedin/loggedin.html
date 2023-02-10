@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../styles/global.css">
+    <script src="https://kit.fontawesome.com/18dea5d02e.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <nav class="nav__loggedin">
@@ -17,13 +18,13 @@
         </div>
         <ul>
         <div class="nav__loggedin-coins__container">
-            <img src="./../../assets/coins.svg" alt="">
+            <i class="fa-sharp fa-solid fa-coins"></i>
             <h4 id="money-amount"> </h4>
 
         </div>
 
         <div class="nav__loggedin-user__container">
-            <img src="./../../assets/usericon.svg" alt="">
+            <i class="fa-solid fa-1x fa-user"></i>
             <h4>John Doe</h4>
         </div>
 
@@ -37,8 +38,8 @@
     </nav>
     <div class="search__box">
             <form class="search__input">
-                <span> <img src="./../../assets/magnifying.svg" alt=""></span>
-                <input type="text" placeholder="Search Registers">
+                <span> <i class="fa-solid fa-magnifying-glass"></i></span>
+                <input type="text" placeholder="Search Registers" class="input__search">
             </form>
             
         </div>
@@ -48,33 +49,7 @@
         <div id="transactions">
 
         </div>    
-        <!--
-    
-       
-        <ul class="loggedin__field-income">
-            <li>
-                <h2>Wage</h2>
-                <p>company blue</p>
-            </li>
-            <li >
-                <p>03/01/2023</p>
-                <h2 >2250,5€</h2>
-            </li>
-        </ul>
-        <ul class="loggedin__field-expense">
-            <li >
-                <h2>Groceries</h2>
-                <p>Chocolate bought on Lidl</p>
-            </li>
-            <li >
-                <p>03/01/2023</p>
-                <h2 >22,5€</h2>
-            </li>
-        </ul>
 
-         -->
-
-      
         
         <button class="loggedin__add-button" onclick="newTransaction()">+</button>
     </main>
@@ -84,17 +59,17 @@
         </div>
         
         <div class="footer__container-social">
-            <a href="www.instagram.com"><img src="./../../assets/instagramIcon.svg" class="footer__social-add-hover" alt="instagram"></a>
-            <a href="www.facebook.com"><img src="./../../assets/facebookIcon.svg" class="footer__social-add-hover" alt="facebook"></a>
-            <a href="www.twitter.com"><img src="./../../assets/twitterIcon.svg" class="footer__social-add-hover" alt="twitter"></a>
+            <a href="www.instagram.com"><i class="fa-brands fa-3x fa-square-instagram"class="footer__social-add-hover" alt="instagram"></i></a>
+            <a href="www.facebook.com"><i class="fa-brands fa-3x fa-square-facebook"class="footer__social-add-hover" alt="facebook"></i></a>
+            <a href="www.twitter.com"><i class="fa-brands fa-3x fa-square-twitter"class="footer__social-add-hover" alt="twitter"></i></a>
         </div>
         <div>
             <div class="footer__contact-items">
-                <img src="./../../assets/phoneIcon.svg" alt="phone number">
+                <i class="fa-solid fa-2x fa-phone"></i>
                 <p>+351 321 456 789</p>
             </div>
             <div class="footer__contact-items">
-                <img src="./../../assets/mailIcon.svg" alt="email">
+                <i class="fa-solid fa-2x fa-envelope"></i>
                 <p>info@fico.com</p>
             </div>
         </div>
@@ -112,4 +87,5 @@
 <script src="loggedin.js"></script>
 <script src="./../../services/transaction.service.js"></script>
 <script src="./../../services/colorToggle.js"></script>
+
 </html>

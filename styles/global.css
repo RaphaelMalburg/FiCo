@@ -31,7 +31,7 @@ img {
   padding: 0.2rem;
 }
 .login__page-input-field button {
-  background-color: #246EB9;
+  background-color: #3b628a;
   color: #FDFFFC;
   border-radius: 5px;
   height: -webkit-fit-content;
@@ -54,14 +54,14 @@ img {
   opacity: 0.4;
 }
 .login__page-input-field .login__input-register-button {
-  border-color: #246EB9;
+  border-color: #3b628a;
   background-color: unset;
   color: #342E37;
   border-radius: 5px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  border: #246EB9 solid 2px;
+  border: #3b628a solid 2px;
   letter-spacing: 2px;
   cursor: pointer;
 }
@@ -164,7 +164,7 @@ img {
 }
 
 .loggedin__add-button {
-  background-color: #246EB9;
+  background-color: #3b628a;
   color: #FDFFFC;
   border-radius: 5px;
   height: -webkit-fit-content;
@@ -333,7 +333,7 @@ nav ul li:hover {
   opacity: 0.8;
 }
 nav ul button {
-  background-color: #246EB9;
+  background-color: #3b628a;
   color: #FDFFFC;
   border-radius: 5px;
   height: -webkit-fit-content;
@@ -355,14 +355,14 @@ nav ul button[disabled] {
   opacity: 0.4;
 }
 nav ul .btn-outline {
-  border-color: #246EB9;
+  border-color: #3b628a;
   background-color: unset;
   color: #342E37;
   border-radius: 5px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  border: #246EB9 solid 2px;
+  border: #3b628a solid 2px;
   letter-spacing: 2px;
   cursor: pointer;
 }
@@ -409,7 +409,7 @@ main .main__hero h1 {
   letter-spacing: 2px;
 }
 main .main__hero button {
-  background-color: #246EB9;
+  background-color: #3b628a;
   color: #FDFFFC;
   border-radius: 5px;
   height: -webkit-fit-content;
@@ -448,7 +448,7 @@ main .main__hero button[disabled] {
   box-shadow: 0px 5px 34px 3px rgba(0, 0, 0, 0.5);
 }
 .section-divisor button {
-  background-color: #246EB9;
+  background-color: #3b628a;
   color: #FDFFFC;
   border-radius: 5px;
   height: -webkit-fit-content;
@@ -499,7 +499,7 @@ section .section__container-callToAction p {
   color: #342E37;
 }
 section .section__container-callToAction button {
-  background-color: #246EB9;
+  background-color: #3b628a;
   color: #FDFFFC;
   border-radius: 5px;
   height: -webkit-fit-content;
@@ -562,7 +562,7 @@ footer .footer__container-nav-buttons {
   gap: 1.5rem;
 }
 footer .footer__container-nav-buttons .footer__container-nav-btn-full {
-  background-color: #246EB9;
+  background-color: #3b628a;
   color: #FDFFFC;
   border-radius: 5px;
   height: -webkit-fit-content;
@@ -588,14 +588,14 @@ footer .footer__container-nav-buttons .footer__container-nav-btn-full[disabled] 
   opacity: 0.4;
 }
 footer .footer__container-nav-buttons .footer__container-nav-btn-outline {
-  border-color: #246EB9;
+  border-color: #3b628a;
   background-color: unset;
   color: #342E37;
   border-radius: 5px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  border: #246EB9 solid 2px;
+  border: #3b628a solid 2px;
   letter-spacing: 2px;
   cursor: pointer;
   font-weight: bold;
@@ -676,40 +676,47 @@ footer .footer__contact-items img {
   color: #FDFFFC;
 }
 .dark-mode svg {
-  fill: #B8C9D9;
+  color: #B8C9D9;
 }
 .dark-mode body, .dark-mode main, .dark-mode .search__box, .dark-mode input {
   background: #342E37;
 }
 .dark-mode nav {
-  background: #246EB9;
+  background: #3b628a;
 }
 .dark-mode ul {
-  background: #246EB9;
+  background: #3b628a;
+}
+.dark-mode .input__search {
+  color: #FDFFFC;
 }
 .dark-mode .search__input {
   border-color: #B8C9D9;
+  color: #FDFFFC;
 }
 .dark-mode footer, .dark-mode .footer__copyright {
-  background: #246EB9;
+  background: #3b628a;
 }
 .dark-mode .footer__copyright {
-  background: #246EB9;
+  background: #3b628a;
+}
+.dark-mode i {
+  color: #B8C9D9;
 }
 
 .light-mode h1, .light-mode h2, .light-mode h3, .light-mode h4, .light-mode h5, .light-mode h6, .light-mode p {
   color: #342E37;
 }
 .light-mode button {
-  background: #246EB9;
+  background: #3b628a;
   color: #FDFFFC;
 }
 .light-mode button .outline {
   background: none;
-  border-color: #246EB9;
+  border-color: #3b628a;
   color: #342E37;
 }
-.light-mode img svg {
+.light-mode svg {
   fill: #262F60;
 }
 .light-mode body {
@@ -722,7 +729,10 @@ footer .footer__contact-items img {
   background: #B8C9D9;
 }
 .light-mode .search__input {
-  border-color: #246EB9;
+  border-color: #3b628a;
+}
+.light-mode i {
+  color: #262F60;
 }
 
 @media (prefers-color-scheme: light) {
@@ -730,15 +740,15 @@ footer .footer__contact-items img {
     color: #342E37;
   }
   body button {
-    background: #246EB9;
+    background: #3b628a;
     color: #FDFFFC;
   }
   body button .outline {
     background: none;
-    border-color: #246EB9;
+    border-color: #3b628a;
     color: #342E37;
   }
-  body img svg {
+  body svg {
     fill: #262F60;
   }
   body body {
@@ -751,6 +761,9 @@ footer .footer__contact-items img {
     background: #B8C9D9;
   }
   body .search__input {
-    border-color: #246EB9;
+    border-color: #3b628a;
+  }
+  body i {
+    color: #262F60;
   }
 }/*# sourceMappingURL=global.css.map */
