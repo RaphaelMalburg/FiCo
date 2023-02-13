@@ -126,4 +126,3 @@ function formatDate(date){
 function formatMoney(value){
     return `${value.toFixed(2)}  €`
 }
-

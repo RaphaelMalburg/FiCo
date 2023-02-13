@@ -1,3 +1,5 @@
+
+
 const transactionService = {
     findByUser: user =>{
         return firebase.firestore()
@@ -54,11 +56,22 @@ function formatMoney(value){
 
 
 
-function sumAmountMoney(value){
+
+     
+
+function sumAmountMoney(){
+
+   
+            
+            
+            
     firebase.firestore()
     .collection('transactions')
+    .where('user.uid', '==' ,user.uid )
     .get()
     .then(snapshot => {
+        console.log('passou')
+        
       const total = snapshot.docs.reduce((sum, doc) => {
         const amount = doc.data().value;
         if (typeof amount === 'number' && !isNaN(amount)) {
@@ -66,6 +79,7 @@ function sumAmountMoney(value){
         }
         return sum;
       }, 0);
+       
       
      const moneyValue= document.getElementById('money-amount')
      moneyValue.innerHTML = formatMoney(total)
@@ -76,6 +90,14 @@ function sumAmountMoney(value){
             console.log(error)
             alert('Error during value recover')
         })
+        }
+    
+
+
+    
+
+
    
-}
-sumAmountMoney();
+   
+
+

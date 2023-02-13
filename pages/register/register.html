@@ -14,6 +14,7 @@
 
 </head>
 <body class="login__page">
+    
     <nav class="nav__login">
         <div>
             <a href="index.html">
@@ -22,8 +23,8 @@
             
         </div>
         <div class="nav__container-toggle-arrow">
-            <div class="nav__modeToggle">
-            <img src="./../../assets/lightIcon.svg" alt="light mode">
+             <div class="nav__modeToggle">
+            <img  src="./../../assets/lighticon.svg" id="toggle-theme"  alt="light mode">
         </div>
         <div class="nav__arrow-back">
             <a href="./../login/login.html"><img src="./../../assets/arrowback.svg" alt="arrow back"></a>
@@ -34,6 +35,7 @@
     <main class="login__page-input-field">
         <form action="loggedin.html">
             <div><h2 class="register__header">Register</h2></div>
+           
             <div>
                 <div>
                   <label for="email" >Email</label>  
@@ -71,11 +73,13 @@
             
         </form>
     </main>
-    <script defer  src="https://www.gstatic.com/firebasejs/9.16.0/firebase-app-compat.js"></script>
-    <script defer  src="https://www.gstatic.com/firebasejs/9.16.0/firebase-auth-compat.js"></script>
-    <script defer src="./../../firebase-init.js" ></script>
-    
-    <script defer src="./../../loading.js"></script>
+    <script   src="https://www.gstatic.com/firebasejs/9.16.0/firebase-app-compat.js"></script>
+    <script   src="https://www.gstatic.com/firebasejs/9.16.0/firebase-auth-compat.js"></script>
+    <script   src="https://www.gstatic.com/firebasejs/9.16.0/firebase-firestore-compat.js"></script>
+
+    <script  src="./../../firebase-init.js" ></script>
+    <script src="./../../services/colorToggle.js"></script>
+    <script  src="./../../loading.js"></script>
     <script defer src="register.js"></script>
 </body>
 </html>

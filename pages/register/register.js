@@ -17,16 +17,23 @@ function register (){
     showLoading()
     const email = form.email().value
     const password = form.password().value
+   
 
+            
     firebase.auth().createUserWithEmailAndPassword
-    (email,password).then(() => {console.log('passou por aqui')
+    (email,password).then(() => {
         hideLoading() 
+        
         window.location.href = './../../pages/login/login.html'
+       
     }).catch(error => {
          hideLoading()
          alert(getErrorMessage(error))
     })
+    
 }
+
+
 
 function getErrorMessage(error){
     if(error.code == 'auth/email-already-in-use'){
@@ -92,6 +99,7 @@ function toggleRegisterButtonDisable(){
 }
 
 
+
 const form = {
     email:() => document.getElementById('email'),
     emailInvalidError:() => document.getElementById('email-invalid-error'),
@@ -102,5 +110,6 @@ const form = {
     confirmPasswordDoesntMatchError:() => document.getElementById('password-doesnt-match-error'),
     passwordMinLengthError:() => document.getElementById('password-min-length-error'),
     registerButton:() => document.getElementById('register-button')
+    
 } 
 

@@ -23,6 +23,11 @@ img{
     h1,h2,h3,h4,h5,h6,p{
         color:$color-dark;
     }
+    .footer__container-nav-buttons button
+    {
+
+        background-color: $color-light-blue;
+    }
     button{
         background: $color-medium-blue;
         color: $color-light;
@@ -55,7 +60,7 @@ img{
     
 }
 @mixin darkMode{
-    h1,h2,h3,h4,h5,h6,p{
+    h1,h2,h3,h4,h5,h6,p, .main__hero{
        color: $color-light;
     }
     button{
@@ -70,11 +75,35 @@ img{
     svg{
        color:$color-light-blue; 
     }
-    body,main, .search__box,input {
+    body,main, .search__box,input, section{
         background: $color-dark;
+        button{
+            background: $color-light-blue;
+            color: $color-dark;
+            .outline{
+                background: none;
+                border-color: $color-light;
+                color: $color-light;
+            }
+        }
+    }
+    form{
+
+        background-color: $color-deep-blue;
+        label,textarea:focus, input:focus{
+            color: $color-light;
+        }
+        button, .login__input-register-button{
+            background: none;
+            border-color: $color-light;
+            color: $color-light;
+        }
     }
     nav{
         background: $color-medium-blue;
+        .btn-outline{
+            border: solid $color-dark 2px;
+        }
     }
     ul{
         background: $color-medium-blue;
@@ -82,13 +111,15 @@ img{
     .input__search{
         color: $color-light;
     }
-    .search__input{
+    .search__input, a {
         border-color:  $color-light-blue;
         color: $color-light;
         
     }
     footer, .footer__copyright{
         background: $color-medium-blue;
+        
+        
     }
     .footer__copyright{
         background: $color-medium-blue;
@@ -96,26 +127,38 @@ img{
     i{
         color: $color-light-blue;
     }
+    .section-divisor{
+        background: $color-medium-blue;
+    }
+    #login-button, #recover-password-button{
+        background: $color-medium-blue;
+    } 
+    .footer__container-nav-buttons a button{
+        
+        color: $color-light;
+        border: solid $color-dark 2px;
+       
+    }
 }
 
 @mixin hero{
     font-weight: bold;
     font-size: 60px;
-    color:$color-dark;
+    
 
 }
 
 @mixin heading{
     font-weight: medium;
     font-size: 34px;
-    color:$color-dark;
+    
 
 }
 
 @mixin subHeading{
     font-weight: bold;
     font-size:  20px;
-    color:$color-dark;
+    
     
 }
 
@@ -146,6 +189,7 @@ img{
     border: none;
     padding: 0.3rem 0.8rem;
     letter-spacing: 2px;
+    transition: .8 ease-in;
     cursor: pointer;
 
     &:hover{
@@ -173,6 +217,7 @@ img{
     border:$color-medium-blue solid 2px;
     letter-spacing: 2px;
     cursor: pointer;
+    transition: .8 ease-in;
 
     &:hover{
         transform: scale(1.1);

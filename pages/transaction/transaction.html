@@ -16,25 +16,19 @@
             <img  src="./../../assets/Logo_with_name-removebg-preview.png" alt="Brand Logo">
         </div>
         <ul>
-        <div class="nav__loggedin-coins__container">
-            <img src="./../../assets/coins.svg" alt="">
-            <h4 id="money-amount" > </h4>
+        
 
-        </div>
-
-        <div class="nav__loggedin-user__container">
-            <img src="./../../assets/usericon.svg" alt="">
-            <h4>John Doe</h4>
-        </div>
+       
 
         
             <button onclick="logout()">Log Out</button> 
         </ul>
         <div class="nav__modeToggle">
-            <img src="./../../assets/lightIcon.svg" alt="light mode">
+            <img  src="./../../assets/lighticon.svg" id="toggle-theme"  alt="light mode">
         </div>
     </ul>
     </nav>
+    
     <main class="login__page-input-field">
         <form >
             <div><h2 class="register__header">Register Transaction</h2></div>
@@ -127,4 +121,5 @@
 <script  src="./../../loading.js"></script>
 <script src="./../../services/transaction.service.js"></script>
 <script src="transaction.js"></script>
+<script src="./../../services/colorToggle.js"></script>
 </html>

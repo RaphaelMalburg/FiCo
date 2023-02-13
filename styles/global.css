@@ -40,6 +40,7 @@ img {
   border: none;
   padding: 0.3rem 0.8rem;
   letter-spacing: 2px;
+  transition: 0.8 ease-in;
   cursor: pointer;
   width: 100%;
 }
@@ -64,6 +65,7 @@ img {
   border: #3b628a solid 2px;
   letter-spacing: 2px;
   cursor: pointer;
+  transition: 0.8 ease-in;
 }
 .login__page-input-field .login__input-register-button:hover {
   transform: scale(1.1);
@@ -94,7 +96,6 @@ img {
   align-items: center;
   font-weight: medium;
   font-size: 34px;
-  color: #342E37;
   margin-top: -2rem;
   margin-bottom: 1rem;
 }
@@ -173,10 +174,10 @@ img {
   border: none;
   padding: 0.3rem 0.8rem;
   letter-spacing: 2px;
+  transition: 0.8 ease-in;
   cursor: pointer;
   font-weight: medium;
   font-size: 34px;
-  color: #342E37;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -308,7 +309,6 @@ nav {
   padding: 0 7%;
   font-weight: bold;
   font-size: 20px;
-  color: #342E37;
   background: #B8C9D9;
   display: flex;
   box-shadow: 0px 5px 34px 3px rgba(0, 0, 0, 0.5);
@@ -342,6 +342,7 @@ nav ul button {
   border: none;
   padding: 0.3rem 0.8rem;
   letter-spacing: 2px;
+  transition: 0.8 ease-in;
   cursor: pointer;
 }
 nav ul button:hover {
@@ -365,6 +366,7 @@ nav ul .btn-outline {
   border: #3b628a solid 2px;
   letter-spacing: 2px;
   cursor: pointer;
+  transition: 0.8 ease-in;
 }
 nav ul .btn-outline:hover {
   transform: scale(1.1);
@@ -405,7 +407,6 @@ main .main__hero {
 main .main__hero h1 {
   font-weight: bold;
   font-size: 60px;
-  color: #342E37;
   letter-spacing: 2px;
 }
 main .main__hero button {
@@ -418,10 +419,10 @@ main .main__hero button {
   border: none;
   padding: 0.3rem 0.8rem;
   letter-spacing: 2px;
+  transition: 0.8 ease-in;
   cursor: pointer;
   font-weight: bold;
   font-size: 20px;
-  color: #342E37;
   color: #FDFFFC;
   align-self: flex-start;
   margin-top: 2.5rem;
@@ -457,10 +458,10 @@ main .main__hero button[disabled] {
   border: none;
   padding: 0.3rem 0.8rem;
   letter-spacing: 2px;
+  transition: 0.8 ease-in;
   cursor: pointer;
   font-weight: bold;
   font-size: 20px;
-  color: #342E37;
   color: #FDFFFC;
 }
 .section-divisor button:hover {
@@ -490,13 +491,11 @@ section .section__container-callToAction {
 section .section__container-callToAction h1 {
   font-weight: bold;
   font-size: 60px;
-  color: #342E37;
   letter-spacing: 3px;
 }
 section .section__container-callToAction p {
   font-weight: bold;
   font-size: 20px;
-  color: #342E37;
 }
 section .section__container-callToAction button {
   background-color: #3b628a;
@@ -508,10 +507,10 @@ section .section__container-callToAction button {
   border: none;
   padding: 0.3rem 0.8rem;
   letter-spacing: 2px;
+  transition: 0.8 ease-in;
   cursor: pointer;
   font-weight: bold;
   font-size: 20px;
-  color: #342E37;
   color: #FDFFFC;
   align-self: flex-start;
   margin-top: 2.5rem;
@@ -547,7 +546,6 @@ footer .footer__container-logo {
 footer .footer__container-nav {
   font-weight: bold;
   font-size: 20px;
-  color: #342E37;
 }
 footer .footer__container-nav li {
   padding-bottom: 1.5rem;
@@ -571,10 +569,10 @@ footer .footer__container-nav-buttons .footer__container-nav-btn-full {
   border: none;
   padding: 0.3rem 0.8rem;
   letter-spacing: 2px;
+  transition: 0.8 ease-in;
   cursor: pointer;
   font-weight: bold;
   font-size: 20px;
-  color: #342E37;
   color: #FDFFFC;
 }
 footer .footer__container-nav-buttons .footer__container-nav-btn-full:hover {
@@ -598,9 +596,9 @@ footer .footer__container-nav-buttons .footer__container-nav-btn-outline {
   border: #3b628a solid 2px;
   letter-spacing: 2px;
   cursor: pointer;
+  transition: 0.8 ease-in;
   font-weight: bold;
   font-size: 20px;
-  color: #342E37;
 }
 footer .footer__container-nav-buttons .footer__container-nav-btn-outline:hover {
   transform: scale(1.1);
@@ -663,7 +661,7 @@ footer .footer__contact-items img {
   width: 10rem;
 }
 
-.dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode h4, .dark-mode h5, .dark-mode h6, .dark-mode p {
+.dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode h4, .dark-mode h5, .dark-mode h6, .dark-mode p, .dark-mode .main__hero {
   color: #FDFFFC;
 }
 .dark-mode button {
@@ -678,11 +676,34 @@ footer .footer__contact-items img {
 .dark-mode svg {
   color: #B8C9D9;
 }
-.dark-mode body, .dark-mode main, .dark-mode .search__box, .dark-mode input {
+.dark-mode body, .dark-mode main, .dark-mode .search__box, .dark-mode input, .dark-mode section {
   background: #342E37;
+}
+.dark-mode body button, .dark-mode main button, .dark-mode .search__box button, .dark-mode input button, .dark-mode section button {
+  background: #B8C9D9;
+  color: #342E37;
+}
+.dark-mode body button .outline, .dark-mode main button .outline, .dark-mode .search__box button .outline, .dark-mode input button .outline, .dark-mode section button .outline {
+  background: none;
+  border-color: #FDFFFC;
+  color: #FDFFFC;
+}
+.dark-mode form {
+  background-color: #262F60;
+}
+.dark-mode form label, .dark-mode form textarea:focus, .dark-mode form input:focus {
+  color: #FDFFFC;
+}
+.dark-mode form button, .dark-mode form .login__input-register-button {
+  background: none;
+  border-color: #FDFFFC;
+  color: #FDFFFC;
 }
 .dark-mode nav {
   background: #3b628a;
+}
+.dark-mode nav .btn-outline {
+  border: solid #342E37 2px;
 }
 .dark-mode ul {
   background: #3b628a;
@@ -690,7 +711,7 @@ footer .footer__contact-items img {
 .dark-mode .input__search {
   color: #FDFFFC;
 }
-.dark-mode .search__input {
+.dark-mode .search__input, .dark-mode a {
   border-color: #B8C9D9;
   color: #FDFFFC;
 }
@@ -703,9 +724,22 @@ footer .footer__contact-items img {
 .dark-mode i {
   color: #B8C9D9;
 }
+.dark-mode .section-divisor {
+  background: #3b628a;
+}
+.dark-mode #login-button, .dark-mode #recover-password-button {
+  background: #3b628a;
+}
+.dark-mode .footer__container-nav-buttons a button {
+  color: #FDFFFC;
+  border: solid #342E37 2px;
+}
 
 .light-mode h1, .light-mode h2, .light-mode h3, .light-mode h4, .light-mode h5, .light-mode h6, .light-mode p {
   color: #342E37;
+}
+.light-mode .footer__container-nav-buttons button {
+  background-color: #B8C9D9;
 }
 .light-mode button {
   background: #3b628a;
@@ -738,6 +772,9 @@ footer .footer__contact-items img {
 @media (prefers-color-scheme: light) {
   body h1, body h2, body h3, body h4, body h5, body h6, body p {
     color: #342E37;
+  }
+  body .footer__container-nav-buttons button {
+    background-color: #B8C9D9;
   }
   body button {
     background: #3b628a;
