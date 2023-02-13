@@ -86,6 +86,7 @@ img{
                 color: $color-light;
             }
         }
+        
     }
     form{
 
@@ -101,9 +102,13 @@ img{
     }
     nav{
         background: $color-medium-blue;
-        .btn-outline{
+        ul{
+            .btn-outline{
             border: solid $color-dark 2px;
+            color: $color-light;
         }
+        }
+        
     }
     ul{
         background: $color-medium-blue;
@@ -121,6 +126,14 @@ img{
         
         
     }
+
+    main .main__hero a {
+        background-color: $color-light-blue;
+        .button{
+            border: none;
+        }
+    }
+
     .footer__copyright{
         background: $color-medium-blue;
     }
@@ -139,6 +152,7 @@ img{
         border: solid $color-dark 2px;
        
     }
+   
 }
 
 @mixin hero{

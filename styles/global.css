@@ -313,6 +313,15 @@ nav {
   display: flex;
   box-shadow: 0px 5px 34px 3px rgba(0, 0, 0, 0.5);
 }
+nav #nav__burger-menu {
+  display: none;
+}
+nav .nav__logo-container a, nav .nav__logo-container img {
+  min-width: 80px;
+}
+nav .nav__modeToggle a, nav .nav__modeToggle img {
+  min-width: 40px;
+}
 nav div {
   margin: 1rem;
   height: auto;
@@ -409,7 +418,7 @@ main .main__hero h1 {
   font-size: 60px;
   letter-spacing: 2px;
 }
-main .main__hero button {
+main .main__hero a {
   background-color: #3b628a;
   color: #FDFFFC;
   border-radius: 5px;
@@ -428,14 +437,14 @@ main .main__hero button {
   margin-top: 2.5rem;
   padding: 0.7rem 2rem;
 }
-main .main__hero button:hover {
+main .main__hero a:hover {
   transform: scale(1.1);
   opacity: 0.8;
 }
-main .main__hero button:active {
+main .main__hero a:active {
   opacity: 0.8;
 }
-main .main__hero button[disabled] {
+main .main__hero a[disabled] {
   opacity: 0.4;
 }
 
@@ -531,6 +540,10 @@ section .section__container-image {
   margin-right: 5rem;
 }
 
+#how-it-works {
+  padding-bottom: 3rem;
+}
+
 footer {
   padding: 0 7%;
   padding-top: 3rem;
@@ -539,9 +552,26 @@ footer {
   display: flex;
   justify-content: space-between;
 }
+footer .footer__contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+footer .footer__contact-container .footer__contact-items {
+  align-self: flex-start;
+  justify-content: space-between;
+}
+footer .footer__contact-container .footer__contact-items i {
+  padding-right: 2rem;
+}
 footer .footer__container-logo {
   width: 70px;
   height: auto;
+}
+footer .footer__container-logo a, footer .footer__container-logo img {
+  min-width: 80px;
 }
 footer .footer__container-nav {
   font-weight: bold;
@@ -702,8 +732,9 @@ footer .footer__contact-items img {
 .dark-mode nav {
   background: #3b628a;
 }
-.dark-mode nav .btn-outline {
+.dark-mode nav ul .btn-outline {
   border: solid #342E37 2px;
+  color: #FDFFFC;
 }
 .dark-mode ul {
   background: #3b628a;
@@ -717,6 +748,12 @@ footer .footer__contact-items img {
 }
 .dark-mode footer, .dark-mode .footer__copyright {
   background: #3b628a;
+}
+.dark-mode main .main__hero a {
+  background-color: #B8C9D9;
+}
+.dark-mode main .main__hero a .button {
+  border: none;
 }
 .dark-mode .footer__copyright {
   background: #3b628a;
@@ -802,5 +839,227 @@ footer .footer__contact-items img {
   }
   body i {
     color: #262F60;
+  }
+}
+@media screen and (min-width: 1850px) {
+  main, section {
+    padding: 0 12%;
+  }
+  nav ul {
+    font-size: calc(1em + 15px);
+  }
+  nav .nav__logo-container {
+    width: 150px;
+  }
+  nav .nav__modeToggle {
+    width: 55px;
+  }
+  .section__container-image, .main__container-img {
+    padding: 5rem;
+  }
+  .button {
+    font-weight: medium;
+    font-size: 34px;
+  }
+  .section-divisor {
+    height: 6rem;
+  }
+  .section-divisor h2 {
+    font-weight: medium;
+    font-size: 34px;
+  }
+  .section-divisor .button {
+    font-weight: medium;
+    font-size: 34px;
+  }
+  section .section__container-callToAction p {
+    font-size: 26px;
+  }
+  section .section__container-callToAction .button {
+    font-weight: medium;
+    font-size: 34px;
+  }
+  footer a, footer li {
+    font-size: 35px;
+  }
+  footer .footer__container-logo {
+    width: 152px;
+  }
+  footer .footer__container-nav-buttons .button {
+    font-weight: medium;
+    font-size: 34px;
+  }
+  footer .footer__contact-container .icon-query {
+    font-size: 4rem;
+  }
+  footer .footer__contact-container p {
+    font-size: 28px;
+  }
+  .footer__copyright {
+    font-size: 27px;
+  }
+}
+@media screen and (max-width: 960px) {
+  nav {
+    justify-content: space-between;
+  }
+  nav .nav__container-responsive {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+  nav ul {
+    display: none;
+  }
+  nav #nav__burger-menu {
+    display: block;
+    justify-content: flex-end;
+    padding-right: 1rem;
+  }
+  main .main__hero h1 {
+    font-size: 44px;
+  }
+  section #how-it-works {
+    display: block;
+  }
+  section .section__container-callToAction h1 {
+    font-size: 48px;
+  }
+  .section-divisor {
+    justify-content: space-evenly;
+    padding: 0 1rem;
+  }
+  .section-divisor h2 {
+    font-size: 20px;
+  }
+  .section-divisor a .button {
+    font-size: 14px;
+  }
+  footer {
+    display: grid;
+    grid-template-areas: "logo-footer nav-footer" "button-footer social-footer  " "contact-footer contact-footer";
+    gap: 1.5rem;
+  }
+  footer .footer__container-social {
+    gap: 1rem;
+  }
+  footer #contact-footer {
+    grid-area: contact-footer;
+    font-size: 14px;
+  }
+  footer #contact-footer i {
+    padding-right: 1rem;
+  }
+  footer #logo-footer {
+    grid-area: logo-footer;
+  }
+  footer #nav-footer {
+    grid-area: nav-footer;
+    font-size: 16px;
+  }
+  footer #button-footer {
+    grid-area: button-footer;
+  }
+  footer #button-footer .button {
+    font-size: 16px;
+  }
+  footer #social-footer {
+    grid-area: social-footer;
+  }
+  footer #social-footer a {
+    font-size: 14px;
+  }
+  footer .footer__contact-container {
+    flex-direction: row;
+  }
+}
+@media screen and (max-width: 700px) {
+  nav {
+    justify-content: space-between;
+  }
+  nav .nav__container-responsive {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+  nav ul {
+    display: none;
+  }
+  nav #nav__burger-menu {
+    display: block;
+    justify-content: flex-end;
+    padding-right: 1rem;
+  }
+  main .main__hero h1 {
+    font-size: 44px;
+  }
+  #how-it-works {
+    display: flex;
+    flex-direction: column;
+  }
+  #how-it-works .section__container-image {
+    margin: auto;
+    padding-bottom: 2rem;
+  }
+  #how-it-works .section__container-image img {
+    width: 100%;
+  }
+  section .section__container-callToAction {
+    width: 100%;
+  }
+  section .section__container-callToAction h1 {
+    font-size: 30px;
+  }
+  section .section__container-callToAction p {
+    font-size: 20px;
+  }
+  section .section__container-callToAction a, section .section__container-callToAction .button {
+    font-size: 14px;
+  }
+  .section-divisor {
+    gap: 0;
+  }
+  .section-divisor h2 {
+    font-size: 16px;
+  }
+  .section-divisor a, .section-divisor .button {
+    font-size: 14px;
+  }
+  footer {
+    display: grid;
+    grid-template-areas: "logo-footer nav-footer" "button-footer social-footer  " "contact-footer contact-footer";
+    gap: 1.5rem;
+  }
+  footer .footer__container-social {
+    gap: 1rem;
+  }
+  footer #contact-footer {
+    grid-area: contact-footer;
+    font-size: 14px;
+  }
+  footer #contact-footer i {
+    padding-right: 1rem;
+  }
+  footer #logo-footer {
+    grid-area: logo-footer;
+  }
+  footer #nav-footer {
+    grid-area: nav-footer;
+    font-size: 16px;
+  }
+  footer #button-footer {
+    grid-area: button-footer;
+  }
+  footer #button-footer .button {
+    font-size: 16px;
+  }
+  footer #social-footer {
+    grid-area: social-footer;
+  }
+  footer #social-footer a {
+    font-size: 14px;
+  }
+  footer .footer__contact-container {
+    flex-direction: row;
   }
 }/*# sourceMappingURL=global.css.map */
